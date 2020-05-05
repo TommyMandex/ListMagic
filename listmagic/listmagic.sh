@@ -33,25 +33,21 @@ if [[ -f $domainlist ]]; then
 	    else
 	        mkdir ./results/final/
 	    fi
-	    if [[ -d ./results/final/$domainlist.folder/ ]]; then
-                :
-	    else
-	        mkdir ./results/final/$domainlist.folder/
-	    fi
 
 
-	    echo $domainlistLine | cut -d. -f1 | sort -u | tee -a ./results/final/$domainlist.folder/all_firstwords.txt
-            echo $domainlistLine | cut -d. -f2 | sort -u | tee -a ./results/final/$domainlist.folder/all_secondwords.txt
-            echo $domainlistLine | cut -d. -f3 | sort -u | tee -a ./results/final/$domainlist.folder/all_thirdwords.txt
-            echo $domainlistLine | cut -d. -f2- | sort -u | tee -a ./results/final/$domainlist.folder/all_first_secondswords.txt
-            echo $domainlistLine | cut -d. -f3- | sort -u | tee -a ./results/final/$domainlist.folder/all_first_second_thirdwords.txt
-	    cat ./results/final/$domainlist.folder/* | sort -u | tee -a ./results/final/$domainlist.folder/all_together.txt
+	    echo $domainlistLine | cut -d. -f1 | sort -u | tee -a ./results/final/$1_all_firstwords.txt
+            echo $domainlistLine | cut -d. -f2 | sort -u | tee -a ./results/final/$1_all_secondwords.txt
+            echo $domainlistLine | cut -d. -f3 | sort -u | tee -a ./results/final/$1_all_thirdwords.txt
+	    echo $domainlistLine | cut -d. -f2- | sort -u | tee -a ./results/final/$1_all_first_secondswords.txt
+            echo $domainlistLine | cut -d. -f3- | sort -u | tee -a ./results/final/$1_all_first_second_thirdwords.txt
+	    cat ./results/final/* | sort -u | tee -a ./results/final/$1_all_together.txt
     done < $domainlist
 
 
-    sed -i "/\b\(yahoo\|.com\)\b/d" ./results/final/$domainlist.folder/*.txt
+    mkdir ./results/final/cleaned
+    sed -i "/\b\(.yahoo\|.com\)\b/d" ./results/final/*
     mkdir $1_results
-    cat ./results/final/$domainlist.folder/all_together.txt | sort -u | tee -a $1_results/results.txt
+    cat ./results/final/$1_all_together.txt | sort -u | tee -a $1_results/results.txt
     exit 1;
 fi
 
@@ -80,6 +76,8 @@ cat ./results/final/all.txt | cut -d. -f2- | sort -u | tee -a ./results/final/$1
 cat ./results/final/all.txt | cut -d. -f3- | sort -u | tee -a ./results/final/$1_all_first_second_thirdwords.txt
 
 cat ./results/final/$1_* | sort -u | tee -a ./results/final/$1_all_together.txt
+
+sed -i "/\b\(.yahoo\|.com\)\b/d" ./results/final/*
 
 mkdir $1_results
 cat ./results/final/$1_all_together.txt | sort -u | tee -a $1_results/results.txt
