@@ -8,3 +8,5 @@ Get every word from root domain and make your own targeted subdomain wordlist. W
 - Kinda fast? Depends on the target.
 
 Since it was 4 AM in the morning for me to upload this, I will continue on this in the next few days. For now, you need to stick with what I have now.
+
+## USAGE: bash listmagic.sh <DOMAIN/DOMAINLIST.TXT>
