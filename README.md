@@ -3,7 +3,7 @@ Get every word from root domain and make your own targeted subdomain wordlist. W
 
 ## Couple know-before's:
 - Make sure you have amass installed!
-- Kinda buggy still, might contain simple bugs, will commit as soon as a bug is identified.
+- Seems stable, might contain simple bugs, will commit as soon as a bug is identified.
 - Kinda fast? Depends on the target.
 - You can CTRL + C on your terminal when amass is taking too long, it will simply skip amass and generate the wordlist.
 
