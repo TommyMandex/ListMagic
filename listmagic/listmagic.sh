@@ -16,11 +16,6 @@ fi
 
 # Unorganized code incoming
 
-if ls ./results/$1_amass.txt &>/dev/null
-then
-    echo "Output file already exists."
-fi
-
 if [[ -f $domainlist ]]; then
     while IFS= read -r domainlistLine; do
 	    if [[ -d ./results/ ]]; then
@@ -55,7 +50,6 @@ fi
 
 mkdir -p ./results/
 amass enum -d $1 --passive -o ./results/$1_amass.txt
-curl -s https://crt.sh/\?q\=\%.$1\&output\=json | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u | tee -a ./results/$1_crtsh.txt
 
 # second amass scan, dump uniques into all.txt
 
