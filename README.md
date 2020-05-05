@@ -9,5 +9,5 @@ Get every word from root domain and make your own targeted subdomain wordlist. W
 
 ### USAGE: bash listmagic.sh <DOMAIN/DOMAINLIST.TXT>
 
-### INSTALL: wget https://raw.githubusercontent.com/weston2337/ListMagic/master/listmagic/listmagic.sh
-### INSTALL 2: git clone https://github.com/weston2337/ListMagic.git
+#### INSTALL: wget https://raw.githubusercontent.com/weston2337/ListMagic/master/listmagic/listmagic.sh
+#### INSTALL 2: git clone https://github.com/weston2337/ListMagic.git
