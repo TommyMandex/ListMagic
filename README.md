@@ -8,3 +8,6 @@ Get every word from root domain and make your own targeted subdomain wordlist. W
 - You can CTRL + C on your terminal when amass is taking too long, it will simply skip amass and generate the wordlist.
 
 ### USAGE: bash listmagic.sh <DOMAIN/DOMAINLIST.TXT>
+
+### INSTALL: wget https://raw.githubusercontent.com/weston2337/ListMagic/master/listmagic/listmagic.sh
+### INSTALL 2: git clone https://github.com/weston2337/ListMagic.git
