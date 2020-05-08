@@ -1,5 +1,5 @@
 # ListMagic
-Get every word from root domain and make your own targeted subdomain wordlist. Works with amass to enumerate subdomains, then grabs every word before the dot as far as to a 5th level subdomain.
+Get every word from root domain and make your own targeted subdomain wordlist. Works with amass to enumerate subdomains, then grabs every word before the dot as far as to a 5th level subdomain. Combine this tool with massdns, dnscan or anything of your choice!
 
 ## Couple know-before's:
 - You **need** amass, which can be installed with the "dep.sh" file.
