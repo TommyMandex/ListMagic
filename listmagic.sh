@@ -4,9 +4,8 @@ programname=$0
 domain=$1
 domainlist=$1
 
-# Sick logo for 0.25 seconds
+# Sick logo
 figlet -t -k "ListMagic"
-sleep 0.25
 
 usage() { 
 	echo "Usage: $0 [DOMAIN/DOMAINLIST]" 
@@ -68,7 +67,7 @@ amass enum -d $1 --passive -o ./results/$1_amass.txt
 # dump results
 
 mkdir -p ./results/final/
-cat ./results/final/$1_* | sort -u | tee -a ./results/final/all.txt
+cat ./results/$1_* | sort -u | tee -a ./results/final/all.txt
 
 # generate words for wordlist
 
