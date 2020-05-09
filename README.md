@@ -31,11 +31,10 @@ chmod +x listmagic.sh
 
 ## COMMON WORKFLOW
 
-1.
-```
-./listmagic.sh <DOMAINLIST.TXT/DOMAIN.COM>
-```
-2. Use generated wordlist dumped in "DOMAIN_results/results.txt" on massdns/dnscan for subdomain bruteforcing.
-3. Get hidden subdomains that resolve, which may not even be available when doing a normal subdomain enumeration scan.
+- ``` ./listmagic.sh <DOMAINLIST.TXT/DOMAIN.COM> ```
+
+- Use generated wordlist dumped in "DOMAIN_results/results.txt" on massdns/dnscan for subdomain bruteforcing.
+
+- Get hidden subdomains that resolve, which may not even be available when doing a normal subdomain enumeration scan.
 
 Enjoy hacking! :)
