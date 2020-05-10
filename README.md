@@ -27,6 +27,8 @@ chmod +x listmagic.sh
 
 ```
 ./listmagic.sh <DOMAINLIST.TXT/DOMAIN.COM>
+
+cd DOMAIN_results
 ```
 
 ## COMMON WORKFLOW
